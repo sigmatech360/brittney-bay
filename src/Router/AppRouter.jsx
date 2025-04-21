@@ -7,7 +7,7 @@ import Home from "../screens/Home";
 
 const AppRouter = () => {
   return (
-    <Router basename="/ny-web-experts">
+    <Router basename="/brittney-bay">
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
