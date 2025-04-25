@@ -133,6 +133,12 @@ p {
   line-height: 1;
   color: #fff;
   font-size: 25px;
+  transition: all 0.3s;
+
+  &:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .mainNav-right .nav-link {
@@ -153,6 +159,7 @@ p {
 .mainNav-right .become-vendor-btn {
   background-color: #000;
   border-color: #000 !important;
+  letter-spacing: 1px;
 }
 /* Nav bar End */
 
@@ -267,6 +274,9 @@ p {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+.theme-fill-btn:hover{
+  filter: invert(1);
 }
 .theme-btn__white-bg {
   background-color: #fff;
@@ -783,7 +793,21 @@ p {
   font-size: 25px;
   color: #000;
   line-height: 1;
+  transition: all 0.3s;
+  &.facebook:hover{
+    color: #1877F2;
+  }
+  &.instagram:hover{
+  color: #e1306c;
+  }
+  &.whatsapp:hover{
+    color: #128C7E ;
+  }
+  &.pinterest:hover{
+    color: #E60023;
+  }
 }
+
 
 .copyright-content {
   display: flex;

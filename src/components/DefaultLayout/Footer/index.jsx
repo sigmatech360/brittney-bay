@@ -85,16 +85,16 @@ const Footer = () => {
                   personalized matchmaking and seamless booking.
                 </p>
                 <div className="footer-social-links">
-                  <a href="javascript:;" className="footer-social-link">
+                  <a href="javascript:;" className="footer-social-link facebook">
                     <RiFacebookCircleLine />
                   </a>
-                  <a href="javascript:;" className="footer-social-link">
+                  <a href="javascript:;" className="footer-social-link whatsapp">
                     <FaWhatsapp />
                   </a>
-                  <a href="javascript:;" className="footer-social-link">
+                  <a href="javascript:;" className="footer-social-link instagram">
                     <FaInstagram />
                   </a>
-                  <a href="javascript:;" className="footer-social-link">
+                  <a href="javascript:;" className="footer-social-link pinterest">
                     <ImPinterest2 />
                   </a>
                 </div>

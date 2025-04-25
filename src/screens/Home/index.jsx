@@ -154,7 +154,11 @@ const Home = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <div className="main-banner__content">
+              <div className="main-banner__content"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <div className="banner-images">
                   <img src={bannerimg1} alt="" />
                   <img src={bannerimg2} alt="" />
@@ -172,7 +176,7 @@ const Home = () => {
                   <button className="theme-btn theme-btn__transparent-bg">
                     Looking For a Vendor
                   </button>
-                  <button className="theme-btn theme-btn__white-bg">
+                  <button className="theme-btn theme-btn__white-bg theme-fill-btn">
                     Plan My Whole Wedding
                   </button>
                 </div>
@@ -186,7 +190,11 @@ const Home = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-4">
-              <div className="sec-head">
+              <div className="sec-head"
+                data-aos="fade-right"
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <h2>
                   Plan in Three <span className="fagon fw-500">Easy Steps</span>
                 </h2>
@@ -194,7 +202,11 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-8">
-              <div className="plan-three__boxes">
+              <div className="plan-three__boxes"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <div className="plan-three__box">
                   <h5>01</h5>
                   <p>
@@ -228,7 +240,11 @@ const Home = () => {
       <section className="stress-free__sec">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-md-7">
+            <div className="col-md-7"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-offset="0"
+            >
               <div className="sec-head">
                 <h2>
                   A <span className="fagon">Stress-Free</span> Way to Plan Your{" "}
@@ -251,7 +267,11 @@ const Home = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div className="sec-head">
+              <div className="sec-head"
+                data-aos="fade-right"
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <h2>
                   A little About <span className="fagon">Jeremy</span> +{" "}
                   <span className="fagon">Brittany</span>
@@ -270,7 +290,11 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="home-about__img ps-5 ms-5">
+              <div className="home-about__img ps-5 ms-5"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <img
                   src={homeAboutImg}
                   className="img-fluid"
@@ -286,7 +310,10 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="sec-head">
+              <div className="sec-head"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              data-aos-offset="0">
                 <h2>
                   Why Choose The Wedding{" "}
                   <span className="fagon fw-400">Concierge?</span>
@@ -296,7 +323,11 @@ const Home = () => {
 
             {whyChooseIconsData.map((item, index) => (
               <div className="col-lg-3" key={index}>
-                <div className="why-choose__box">
+                <div className="why-choose__box"
+                data-aos="fade-up"
+                data-aos-duration={`${(index+1) * 1000}`}
+                data-aos-offset="0"
+                >
                   <div className="why-choose__box-img">
                     <img src={item.icon} alt="" />
                   </div>
@@ -312,7 +343,11 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <div className="grow-wedding__business-leftCol">
+              <div className="grow-wedding__business-leftCol" 
+                data-aos="fade-right"
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <div className="sec-head">
                   <h2>
                     Grow Your{" "}
@@ -331,7 +366,11 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="sec-head">
+              <div className="sec-head" 
+                data-aos="fade-left"
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <h2>
                   How It <span className="fagon fw-500">Works for</span> Vendors
                 </h2>
@@ -339,7 +378,12 @@ const Home = () => {
 
               <div className="grow-wedding__business-boxes">
                 {growWeddingBusinessIconData.map((item, index) => (
-                  <div className="grow-wedding__business-box">
+                  <div className="grow-wedding__business-box"
+                  data-aos="fade-left"
+                  // data-aos-duration={`${(index + 1) * 1000}`}
+                  data-aos-duration="2000"
+                  data-aos-offset="0"
+                  >
                     <div className="grow-wedding__business-box-icon">
                       <img src={item.icon} alt={item.title} />
                     </div>
@@ -361,7 +405,12 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <div className="faq-sec__leftCol">
+              <div className="faq-sec__leftCol" 
+                data-aos="fade-right"
+                // data-aos-duration={`${(index + 1) * 1000}`}
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <div className="sec-head">
                   <p className="sec-tag">For Couples</p>
                   <h2>
@@ -382,7 +431,12 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="sec-head">
+              <div className="sec-head" 
+                data-aos="fade-left"
+                // data-aos-duration={`${(index + 1) * 1000}`}
+                data-aos-duration="2000"
+                data-aos-offset="0"
+              >
                 <p className="sec-tag">For Vendors</p>
                 <h2>
                   Got <span className="fagon fw-500">Questions</span>? We’ve Got{" "}
@@ -392,7 +446,12 @@ const Home = () => {
               <div className="faqs-items">
                 <Accordion defaultActiveKey="0">
                   {faqsData2.map((item, index) => (
-                    <Accordion.Item eventKey={index.toString()} key={index}>
+                    <Accordion.Item eventKey={index.toString()} key={index}
+                    data-aos="fade-left"
+                    // data-aos-duration={`${(index + 1) * 1000}`}
+                    data-aos-duration="2000"
+                    data-aos-offset="0"
+                    >
                       <Accordion.Header>{item.titla}</Accordion.Header>
                       <Accordion.Body>{item.description}</Accordion.Body>
                     </Accordion.Item>
