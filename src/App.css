@@ -135,7 +135,7 @@ p {
   font-size: 25px;
   transition: all 0.3s;
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 }
@@ -274,7 +274,7 @@ p {
   gap: 16px;
   flex-wrap: wrap;
 }
-.theme-fill-btn:hover{
+.theme-fill-btn:hover {
   filter: invert(1);
 }
 .theme-btn__white-bg {
@@ -381,6 +381,7 @@ p {
   background-position: center;
   padding: 120px 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .stress-free__sec .sec-head {
@@ -399,6 +400,7 @@ p {
 
 .home-about__sec {
   padding: 60px 0;
+  overflow: hidden;
 }
 
 .home-about__sec .sec-head h2 {
@@ -417,6 +419,7 @@ p {
   background-size: cover;
   background-position: center;
   padding: 120px 0;
+  overflow: hidden;
 }
 
 .why-choose__sec .sec-head {
@@ -466,6 +469,7 @@ p {
 
 .faq-sec {
   margin: 60px 0;
+  overflow: hidden;
 }
 
 .faq-sec .accordion-item {
@@ -551,6 +555,7 @@ p {
 
 .grow-wedding__business {
   margin: 60px 0;
+  overflow: hidden;
 }
 
 .grow-wedding__business .sec-head h2 {
@@ -639,6 +644,7 @@ p {
 
 .plan-three {
   margin: 60px 0;
+  overflow: hidden;
 }
 
 .plan-three .sec-head h2 {
@@ -712,6 +718,274 @@ p {
 .plan-three__box-icon-3 {
   top: 147%;
 }
+
+/* Inner Pages Start */
+.inner-banner {
+  background: #000;
+  padding: 230px 0 140px;
+  color: #fff;
+}
+
+.inner-banner__content h1 {
+  font-size: 70px;
+  font-weight: 500;
+}
+
+.service-cards-total {
+  color: #686868;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.service-cards-top {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-cards-top-filters {
+  background-color: #e7e0da;
+  padding: 8px;
+  display: flex;
+  gap: 13px;
+  border-radius: 5px;
+}
+
+.services-cards-filter-btn {
+  padding: 3px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: unset;
+  border-radius: 5px;
+  font-size: 17px;
+  color: #686868;
+  background: transparent;
+}
+.services-cards-filter-btn.active {
+  background: #fff;
+}
+
+.service-card__image {
+  position: relative;
+}
+
+.service-card {
+  margin-bottom: 25px;
+}
+
+.service-card__image .swiper-slide .service-image {
+  width: 100%;
+}
+.service-card__image .favorite-btn {
+  background: #00000036;
+  border-radius: 4px;
+  opacity: 1;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: unset;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  color: #fff;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+}
+
+.service-card__image .swiper-button-prev:after,
+.service-card__image .swiper-button-next:after {
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.service-card__image .swiper-button-prev,
+.service-card__image .swiper-button-next {
+  height: unset;
+}
+.service-card__image .swiper-pagination-bullet {
+  border-radius: 7px;
+  border: 1px solid #fff;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+}
+.service-card__image .swiper-pagination-bullet-active {
+  background-color: #fff;
+  width: 50px;
+}
+
+.service-card__content h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.service-card__content p {
+  font-size: 16px;
+  color: #686868;
+}
+
+.service-card__content-meta {
+  color: #686868;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.service-card__content-meta-rating {
+  color: #000;
+}
+
+.service-card__content .features {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  color: #686868;
+}
+.photographers-list__sec {
+  padding: 70px 0;
+}
+.service-card__content-btn {
+  font-size: 16px;
+  border: 1px solid;
+  color: #fff;
+  padding: 10px 20px;
+  line-height: 1;
+  border-radius: 30px;
+  transition: all 0.25s linear;
+  background-color: #000;
+  border-color: #000;
+}
+
+.service-card__content .actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.service-card__content .actions span {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.services-cards__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.services-cards__pagination button {
+  color: #686868;
+  border: 1px solid #686868;
+  line-height: 1;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.services-cards__pagination button.active {
+  background: #212121;
+  color: #fff;
+}
+
+.pagination-next-btn {
+  background-color: #212121 !important;
+  color: #fff !important;
+  padding: 0px 40px;
+  border-radius: 22px !important;
+}
+
+.wedding-vendors__sec {
+  padding: 60px 0;
+}
+
+.wedding-vendors__sec .sec-head h2 {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.wedding-vendors__sec .sec-head {
+  max-width: 650px;
+}
+
+.wedding-vendors__sec .sec-head p {
+  font-size: 16px;
+  color: #686868;
+}
+
+/* .wedding-form-group */
+.form-label {
+  color: #212121;
+  font-size: 16px;
+  font-weight: 500;
+  user-select: none;
+}
+
+.form-control {
+  border: 1px solid #707070;
+  padding: 10px 16px;
+  color: #686868;
+  border-radius: 30px;
+}
+.form-control:focus {
+  box-shadow: unset;
+}
+textarea.form-control {
+  resize: none;
+  border-radius: 12px;
+}
+
+.form-check-input[type="radio"] {
+  border: 1px solid #686868;
+}
+.form-check-input[type="radio"]:focus {
+  box-shadow: unset;
+}
+.form-check-input:checked {
+  background: #686868;
+}
+
+label.form-check-label {
+  color: #686868;
+  font-size: 15px;
+}
+
+.wedding-checkboxes {
+  display: flex;
+  column-gap: 16px;
+  flex-wrap: wrap;
+}
+
+.wedding-form-group {
+  margin-bottom: 25px;
+}
+
+.form-submit__btn {
+  font-size: 16px;
+  border: 1px solid;
+  color: #fff;
+  padding: 13px 16px;
+  line-height: 1;
+  border-radius: 30px;
+  transition: all 0.25s linear;
+  background-color: #000;
+  min-width: 250px;
+}
+/* Inner Pages End */
 
 /* Footer Start */
 .main-footer,
@@ -793,20 +1067,19 @@ p {
   color: #000;
   line-height: 1;
   transition: all 0.3s;
-  &.facebook:hover{
-    color: #1877F2;
+  &.facebook:hover {
+    color: #1877f2;
   }
-  &.instagram:hover{
-  color: #e1306c;
+  &.instagram:hover {
+    color: #e1306c;
   }
-  &.whatsapp:hover{
-    color: #128C7E ;
+  &.whatsapp:hover {
+    color: #128c7e;
   }
-  &.pinterest:hover{
-    color: #E60023;
+  &.pinterest:hover {
+    color: #e60023;
   }
 }
-
 
 .copyright-content {
   display: flex;

@@ -43,7 +43,11 @@ const Header = () => {
             <Nav.Link as={Link} to={""} className=" login-btn">
               Login
             </Nav.Link>
-            <Nav.Link as={Link} to={""} className="become-vendor-btn theme-fill-btn">
+            <Nav.Link
+              as={Link}
+              to={""}
+              className="become-vendor-btn theme-fill-btn"
+            >
               Become a Vendor
             </Nav.Link>
           </div>

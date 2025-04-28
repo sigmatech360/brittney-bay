@@ -154,25 +154,29 @@ const Home = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <div className="main-banner__content"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                data-aos-offset="0"
-              >
-                <div className="banner-images">
+              <div className="main-banner__content">
+                <div
+                  className="banner-images"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <img src={bannerimg1} alt="" />
                   <img src={bannerimg2} alt="" />
                 </div>
-                <h1>
+                <h1 data-aos="fade-up" data-aos-delay="300">
                   Your Dream <span className="fagon">Wedding</span>, Made{" "}
                   <span className="fagon">Simple</span>
                 </h1>
-                <p>
+                <p data-aos="fade-up" data-aos-delay="500">
                   Finding the perfect vendors for your big day has never been
                   easier. Match with top-rated wedding professionals, plan
                   effortlessly, and book with confidence all in one place.
                 </p>
-                <div className="main-banner__buttons">
+                <div
+                  className="main-banner__buttons"
+                  data-aos="fade-up"
+                  data-aos-delay="700"
+                >
                   <button className="theme-btn theme-btn__transparent-bg">
                     Looking For a Vendor
                   </button>
@@ -190,10 +194,10 @@ const Home = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-4">
-              <div className="sec-head"
+              <div
+                className="sec-head"
                 data-aos="fade-right"
-                data-aos-duration="2000"
-                data-aos-offset="0"
+                data-aos-delay="300"
               >
                 <h2>
                   Plan in Three <span className="fagon fw-500">Easy Steps</span>
@@ -202,10 +206,10 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-8">
-              <div className="plan-three__boxes"
-                data-aos="fade-left"
-                data-aos-duration="2000"
-                data-aos-offset="0"
+              <div
+                className="plan-three__boxes"
+                data-aos="zoom-in"
+                data-aos-delay="300"
               >
                 <div className="plan-three__box">
                   <h5>01</h5>
@@ -240,21 +244,22 @@ const Home = () => {
       <section className="stress-free__sec">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-md-7"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              data-aos-offset="0"
-            >
+            <div className="col-md-7">
               <div className="sec-head">
-                <h2>
+                <h2 data-aos="fade-up" data-aos-delay="100">
                   A <span className="fagon">Stress-Free</span> Way to Plan Your{" "}
                   <span className="fagon">Wedding</span>
                 </h2>
-                <p>
+                <p data-aos="fade-up" data-aos-delay="300">
                   Let us do the heavy lifting! We’ll match you with the best
                   vendors, so you can focus on the moments that matter.
                 </p>
-                <Link to="" className="theme-btn theme-btn__transparent-bg">
+                <Link
+                  to=""
+                  className="theme-btn theme-btn__transparent-bg"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
                   Find My Vendors
                 </Link>
               </div>
@@ -267,16 +272,12 @@ const Home = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div className="sec-head"
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                data-aos-offset="0"
-              >
-                <h2>
+              <div className="sec-head">
+                <h2 data-aos="fade-right" data-aos-delay="200">
                   A little About <span className="fagon">Jeremy</span> +{" "}
                   <span className="fagon">Brittany</span>
                 </h2>
-                <p>
+                <p data-aos="fade-right" data-aos-delay="400">
                   Brittany & Jeremy started Bay Productions in 2014. With over
                   500 weddings under their belt, they’ve worked with many of the
                   best vendors that Dallas has to offer! The Bays have 3 boys,
@@ -290,10 +291,10 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="home-about__img ps-5 ms-5"
-                data-aos="fade-left"
-                data-aos-duration="2000"
-                data-aos-offset="0"
+              <div
+                className="home-about__img ps-5 ms-5"
+                data-aos="zoom-in"
+                data-aos-delay="500"
               >
                 <img
                   src={homeAboutImg}
@@ -310,11 +311,8 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="sec-head"
-              data-aos="fade-down"
-              data-aos-duration="2000"
-              data-aos-offset="0">
-                <h2>
+              <div className="sec-head">
+                <h2 data-aos="zoom-in" data-aos-delay="100">
                   Why Choose The Wedding{" "}
                   <span className="fagon fw-400">Concierge?</span>
                 </h2>
@@ -323,10 +321,10 @@ const Home = () => {
 
             {whyChooseIconsData.map((item, index) => (
               <div className="col-lg-3" key={index}>
-                <div className="why-choose__box"
-                data-aos="fade-up"
-                data-aos-duration={`${(index+1) * 1000}`}
-                data-aos-offset="0"
+                <div
+                  className="why-choose__box"
+                  data-aos="flip-left"
+                  data-aos-delay={index * 300}
                 >
                   <div className="why-choose__box-img">
                     <img src={item.icon} alt="" />
@@ -343,46 +341,44 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <div className="grow-wedding__business-leftCol" 
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                data-aos-offset="0"
-              >
+              <div className="grow-wedding__business-leftCol">
                 <div className="sec-head">
-                  <h2>
+                  <h2 data-aos="fade-right" data-aos-delay="100">
                     Grow Your{" "}
                     <span className="fagon fw-500">Wedding Business</span> with
                     Direct Leads
                   </h2>
-                  <p>
+                  <p data-aos="fade-right" data-aos-delay="300">
                     Are you a wedding vendor looking to attract more clients?
                     The Wedding Concierge helps you connect with engaged couples
                     actively searching for your services. No more wasted
                     marketing spend our platform delivers high-quality leads
                     straight to you.
                   </p>
-                  <button className="body-btn">Join as a Vendor</button>
+                  <button
+                    className="body-btn"
+                    data-aos="fade-right"
+                    data-aos-delay="500"
+                  >
+                    Join as a Vendor
+                  </button>
                 </div>
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="sec-head" 
-                data-aos="fade-left"
-                data-aos-duration="2000"
-                data-aos-offset="0"
-              >
-                <h2>
+              <div className="sec-head">
+                <h2 data-aos="fade-right" data-aos-delay="200">
                   How It <span className="fagon fw-500">Works for</span> Vendors
                 </h2>
               </div>
 
               <div className="grow-wedding__business-boxes">
                 {growWeddingBusinessIconData.map((item, index) => (
-                  <div className="grow-wedding__business-box"
-                  data-aos="fade-left"
-                  // data-aos-duration={`${(index + 1) * 1000}`}
-                  data-aos-duration="2000"
-                  data-aos-offset="0"
+                  <div
+                    key={index}
+                    className="grow-wedding__business-box"
+                    data-aos="flip-left"
+                    data-aos-delay={index * 200}
                   >
                     <div className="grow-wedding__business-box-icon">
                       <img src={item.icon} alt={item.title} />
@@ -405,15 +401,16 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <div className="faq-sec__leftCol" 
-                data-aos="fade-right"
-                // data-aos-duration={`${(index + 1) * 1000}`}
-                data-aos-duration="2000"
-                data-aos-offset="0"
-              >
+              <div className="faq-sec__leftCol">
                 <div className="sec-head">
-                  <p className="sec-tag">For Couples</p>
-                  <h2>
+                  <p
+                    className="sec-tag"
+                    data-aos="fade-right"
+                    data-aos-delay="200"
+                  >
+                    For Couples
+                  </p>
+                  <h2 data-aos="fade-right" data-aos-delay="400">
                     Got <span className="fagon fw-500">Questions</span>? We’ve
                     Got <span className="fagon fw-500">Answers</span>!
                   </h2>
@@ -421,7 +418,12 @@ const Home = () => {
                 <div className="faqs-items">
                   <Accordion defaultActiveKey="0">
                     {faqsData1.map((item, index) => (
-                      <Accordion.Item eventKey={index.toString()} key={index}>
+                      <Accordion.Item
+                        eventKey={index.toString()}
+                        key={index}
+                        data-aos="zoom-in"
+                        data-aos-delay={index * 200}
+                      >
                         <Accordion.Header>{item.titla}</Accordion.Header>
                         <Accordion.Body>{item.description}</Accordion.Body>
                       </Accordion.Item>
@@ -431,14 +433,15 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="sec-head" 
-                data-aos="fade-left"
-                // data-aos-duration={`${(index + 1) * 1000}`}
-                data-aos-duration="2000"
-                data-aos-offset="0"
-              >
-                <p className="sec-tag">For Vendors</p>
-                <h2>
+              <div className="sec-head">
+                <p
+                  className="sec-tag"
+                  data-aos="fade-left"
+                  data-aos-delay="200"
+                >
+                  For Vendors
+                </p>
+                <h2 data-aos="fade-left" data-aos-delay="400">
                   Got <span className="fagon fw-500">Questions</span>? We’ve Got{" "}
                   <span className="fagon fw-500">Answers</span>!
                 </h2>
@@ -446,11 +449,11 @@ const Home = () => {
               <div className="faqs-items">
                 <Accordion defaultActiveKey="0">
                   {faqsData2.map((item, index) => (
-                    <Accordion.Item eventKey={index.toString()} key={index}
-                    data-aos="fade-left"
-                    // data-aos-duration={`${(index + 1) * 1000}`}
-                    data-aos-duration="2000"
-                    data-aos-offset="0"
+                    <Accordion.Item
+                      eventKey={index.toString()}
+                      key={index}
+                      data-aos="zoom-in"
+                      data-aos-delay={index * 200}
                     >
                       <Accordion.Header>{item.titla}</Accordion.Header>
                       <Accordion.Body>{item.description}</Accordion.Body>

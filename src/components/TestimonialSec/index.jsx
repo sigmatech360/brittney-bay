@@ -16,7 +16,6 @@ const TestimonialSec = () => {
             className="col-xl-3 col-lg-4 col-md-6 testimonial-col-1 mb-lg-0 mb-4"
             data-aos="fade-right"
             data-aos-duration="3000"
-            data-aos-offset="0"
           >
             <TestimonialCard
               title={
@@ -32,7 +31,6 @@ const TestimonialSec = () => {
             className="col-xl-5 col-lg-4 col-md-6 testimonial-col-2 mb-lg-0 mb-4"
             data-aos="fade-down"
             data-aos-duration="3000"
-            data-aos-offset="0"
           >
             <TestimonialCard
               flexVariant="row"
@@ -50,7 +48,6 @@ const TestimonialSec = () => {
             className="col-xl-3 col-lg-4 col-md-6 testimonial-col-3 mb-lg-0 mb-4"
             data-aos="fade-left"
             data-aos-duration="3000"
-            data-aos-offset="0"
           >
             <TestimonialCard
               title={
@@ -66,14 +63,14 @@ const TestimonialSec = () => {
           <div className="col-md-12 testimonial-sec-head-col">
             <div
               className="sec-head"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-duration="3000"
-              data-aos-offset="0"
             >
               <p className="sec-tag">Testimonials</p>
               <h2>
-                Love <span className="fagon fw-500">Stories</span> & Business Success –
-                Real <span className="fagon fw-500">Testimonials</span>
+                Love <span className="fagon fw-500">Stories</span> & Business
+                Success – Real{" "}
+                <span className="fagon fw-500">Testimonials</span>
               </h2>
             </div>
           </div>
@@ -82,7 +79,6 @@ const TestimonialSec = () => {
             className="col-lg-4 col-md-6 testimonial-col-4 mb-lg-0 mb-4"
             data-aos="fade-right"
             data-aos-duration="3000"
-            data-aos-offset="0"
           >
             <TestimonialCard
               flexVariant="row"
@@ -100,7 +96,6 @@ const TestimonialSec = () => {
             className="col-xl-3 col-lg-4 col-md-6 testimonial-col-5 mb-lg-0 mb-4"
             data-aos="fade-up"
             data-aos-duration="3000"
-            data-aos-offset="0"
           >
             <TestimonialCard
               title={
@@ -116,7 +111,6 @@ const TestimonialSec = () => {
             className="col-lg-4 col-md-6 testimonial-col-6 mb-lg-0 mb-4"
             data-aos="fade-left"
             data-aos-duration="3000"
-            data-aos-offset="0"
           >
             <TestimonialCard
               flexVariant="row"
