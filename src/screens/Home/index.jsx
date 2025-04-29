@@ -210,6 +210,7 @@ const Home = () => {
                 className="plan-three__boxes"
                 data-aos="zoom-in"
                 data-aos-delay="300"
+                data-aos-offset="100"
               >
                 <div className="plan-three__box">
                   <h5>01</h5>
@@ -292,7 +293,7 @@ const Home = () => {
             </div>
             <div className="col-lg-6">
               <div
-                className="home-about__img ps-5 ms-5"
+                className="home-about__img ps-xl-5 ms-xl-5"
                 data-aos="zoom-in"
                 data-aos-delay="500"
               >
@@ -367,7 +368,7 @@ const Home = () => {
             </div>
             <div className="col-lg-6">
               <div className="sec-head">
-                <h2 data-aos="fade-right" data-aos-delay="200">
+                <h2 data-aos="fade-left" data-aos-delay="200">
                   How It <span className="fagon fw-500">Works for</span> Vendors
                 </h2>
               </div>
@@ -377,7 +378,7 @@ const Home = () => {
                   <div
                     key={index}
                     className="grow-wedding__business-box"
-                    data-aos="flip-left"
+                    data-aos="slide-left"
                     data-aos-delay={index * 200}
                   >
                     <div className="grow-wedding__business-box-icon">

@@ -451,12 +451,13 @@ p {
 
 .why-choose__box-img {
   background: #fff;
-  width: 45px;
+  /* width: 45px; */
   height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 7px;
+  flex: 0 0 45px;
 }
 .why-choose__box-img img {
   width: 25px;
@@ -497,7 +498,7 @@ p {
   color: #707070;
   padding-left: 0;
   padding-top: 0;
-  font-style: 15px;
+  font-size: 15px;
 }
 .faq-sec .accordion-item {
   background: transparent;
@@ -586,13 +587,14 @@ p {
 }
 .grow-wedding__business-box-icon {
   background: #212121;
-  width: 70px;
+  /* width: 70px; */
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
   border-radius: 5px;
+  flex: 0 0 55px;
 }
 
 .grow-wedding__business-box-icon img {
@@ -909,7 +911,11 @@ p {
 }
 
 .wedding-vendors__sec {
-  padding: 60px 0;
+  padding: 60px 0 30px;
+  background-color: #fff;
+  max-width: 1350px;
+  margin: -220px auto 40px;
+  border-radius: 20px;
 }
 
 .wedding-vendors__sec .sec-head h2 {
@@ -933,6 +939,7 @@ p {
   font-size: 16px;
   font-weight: 500;
   user-select: none;
+  margin-bottom: 5px;
 }
 
 .form-control {
@@ -973,6 +980,11 @@ label.form-check-label {
 .wedding-form-group {
   margin-bottom: 25px;
 }
+.wedding-form-group-p {
+  color: #686868;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 
 .form-submit__btn {
   font-size: 16px;
@@ -984,6 +996,163 @@ label.form-check-label {
   transition: all 0.25s linear;
   background-color: #000;
   min-width: 250px;
+}
+
+.WeddingVendorsDetails__page .main-navbar {
+  position: unset;
+}
+.WeddingVendorsDetails__page .main-navbar .navbar-nav .nav-link {
+  color: #212121;
+}
+.WeddingVendorsDetails__page .main-navbar .navbar-nav .nav-link::after {
+  background-color: #212121;
+}
+.WeddingVendorsDetails__page .mainNav-right__icon {
+  color: #212121;
+}
+.WeddingVendorsDetails__page .mainNav-right .login-btn {
+  color: #212121;
+}
+.WeddingVendorsDetails__page .mainNav-right .login-btn:hover {
+  color: #fff;
+}
+.WeddingVendorsDetails__page .mainNav-right .become-vendor-btn:hover {
+  background-color: transparent;
+  border-color: #212121 !important;
+  filter: unset;
+  color: #212121;
+}
+.WeddingVendorsDetails__page .main-navbar .navbar-brand img {
+  filter: invert(1);
+}
+
+.weddingVendors-gallery {
+  display: flex;
+  gap: 12px;
+}
+.weddingVendors-gallery-div-2-1 {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+.weddingVendors-gallery-div-2-1 div {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.weddingVendors-gallery-div-1 {
+  flex: 0 0 45%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.weddingVendors-gallery-div-2 {
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.weddingVendors-gallery-div-2-2 img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+.weddingVendors-gallery-div-2-1 img {
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+.weddingVendors-gallery-div-1 img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.weddingVendors-gallery img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.weddingVendors-gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+.weddingVendors-gallery-div-2-2 {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.weddingVendors__details {
+  padding: 60px 0;
+  border-top: 1px solid #686868;
+}
+
+.weddingVendors__details .service-card__content .features {
+  flex-direction: column;
+  align-items: start;
+  gap: 6px;
+}
+.weddingVendors__details .service-card__content {
+  padding: 0 16px;
+}
+
+.about-vendor__leftContent-img-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.about-vendor__leftContent-img {
+  flex: 0 0 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.about-vendor__leftContent-img img {
+  width: 100%;
+}
+
+.about-vendor__leftContent-details h5 {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.about-vendor__leftContent-details p {
+  color: #aaaaaa;
+  margin: 0;
+}
+
+.about-vendor__leftContent h4 {
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.about-vendor {
+  margin-top: 30px;
+}
+
+.about-vendor__rightContent p {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #212121;
+}
+
+.readMore {
+  text-decoration: underline;
+  border: unset;
+  background: transparent;
+  color: #212121;
+  font-size: 17px;
+}
+
+.about-vendor__rightContent h4 {
+  font-size: 23px;
+  font-weight: 500;
+  margin: 14px 0;
+}
+
+.about-vendor__rightContent {
+  border-left: 1px solid #707070;
+  padding: 5px 0 30px 20px;
 }
 /* Inner Pages End */
 
@@ -1142,3 +1311,109 @@ label.form-check-label {
 }
 
 /* Footer End */
+
+/* Media Quries */
+@media (max-width: 1399px) {
+  .main-navbar .navbar-brand img {
+    width: 160px;
+  }
+  .main-navbar .navbar-nav .nav-link {
+    padding: 8px 5px;
+    font-size: 15px;
+  }
+  .mainNav-right .nav-link {
+    font-size: 15px;
+  }
+  .mainNav-right__icon {
+    font-size: 23px;
+  }
+  .plan-three__boxes {
+    height: 100%;
+    background-size: 100% 80%;
+    padding: 80px 0;
+  }
+  .plan-three__box {
+    max-width: 190px;
+  }
+  .plan-three__box-icon-1 {
+    top: 112%;
+  }
+  .plan-three__box-icon-3 {
+    top: 112%;
+  }
+  .plan-three__box-icon-2 {
+    bottom: 112%;
+  }
+  .plan-three__box p {
+    font-size: 17px;
+  }
+
+  .faq-sec .sec-head h2 {
+    font-size: 59px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .main-navbar .navbar-brand img {
+    width: 130px;
+  }
+  .main-navbar .navbar-nav .nav-link {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+  .main-banner__content h1 {
+    font-size: 41px;
+  }
+  .plan-three .sec-head h2 {
+    font-size: 46px;
+  }
+  .home-about__sec .sec-head h2 {
+    font-size: 60px;
+  }
+  .why-choose__box h6 {
+    font-size: 15px;
+  }
+  .why-choose__box {
+    padding: 10px;
+  }
+  .why-choose__sec .sec-head h2 {
+    font-size: 60px;
+  }
+  .grow-wedding__business .sec-head h2 {
+    font-size: 50px;
+  }
+  .faq-sec .sec-head h2 {
+    font-size: 50px;
+  }
+  .faq-sec .accordion-button {
+    font-size: 16px;
+  }
+
+  .testimonial-card-content h4 {
+    font-size: 18px;
+  }
+
+  .testimonial-card-flex-row .testimonial-card-img {
+    flex: 0 0 110px;
+  }
+
+  .testimonial-sec .sec-head h2 {
+    font-size: 28px;
+  }
+  .testimonial-sec .sec-head {
+    max-width: 340px;
+    margin: -110px auto 30px;
+  }
+  .sec-tag {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .plan-three__boxes {
+    height: 100%;
+    background-size: 100% 80%;
+    padding: 70px 0;
+  }
+  .plan-three__box {
+    max-width: 170px;
+  }
+}

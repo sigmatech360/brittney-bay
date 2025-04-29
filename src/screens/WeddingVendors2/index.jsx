@@ -60,7 +60,7 @@ const vissionOfWeddingCheckboxes = [
   },
 ];
 
-const WeddingVendors = () => {
+const WeddingVendors2 = () => {
   return (
     <DefaultLayout>
       <section className="inner-banner">
@@ -176,73 +176,19 @@ const WeddingVendors = () => {
                 <label htmlFor="prioritizeYourVendors" className="form-label">
                   Prioritize Your Vendors
                 </label>
-                <textarea
-                  className="form-control"
-                  placeholder="Prioritize Your Vendors"
+                <select
+                  className="form-select form-control"
                   id="prioritizeYourVendors"
-                  rows={5}
-                ></textarea>
-              </div>
-
-              <div className="wedding-form-group">
-                <label htmlFor="dazzleUs" className="form-label">
-                  Anything Else You Would Like Your Potential Vendors To Know
-                  About Your Wedding?
-                </label>
-                <p className="wedding-form-group-p">Dazzle us</p>
-                <textarea
-                  className="form-control"
-                  id="dazzleUs"
-                  rows={5}
-                ></textarea>
-              </div>
-
-              <div className="wedding-form-group">
-                <label htmlFor="cateringId" className="form-label">
-                  Catering
-                </label>
-                <select className="form-select form-control" id="cateringId">
+                >
                   <option value="" disabled selected>
                     Select An Option
                   </option>
-                  <option value="Option1">Option 1</option>
-                  <option value="Option2">Option 2</option>
-                  <option value="Option3">Option 3</option>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
                 </select>
               </div>
-              <div className="wedding-form-group">
-                <label className="form-label">Additional Vendors</label>
-                <div className="wedding-checkboxes">
-                  {[
-                    {
-                      labelId: "liveArtistId",
-                      title: "Live Artist",
-                    },
-                    {
-                      labelId: "cigarsID",
-                      title: "Cigars",
-                    },
-                  ].map((item, index) => (
-                    <div className="form-check" key={index}>
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name="AditionalVendors"
-                        id={item.labelId}
-                      />
-                      <label
-                        className="form-check-label"
-                        htmlFor={item.labelId}
-                      >
-                        {item.title}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
 
-            <div className="col-lg-6">
               <div className="wedding-form-group">
                 <label className="form-label">Venue</label>
                 <div className="wedding-checkboxes">
@@ -470,6 +416,19 @@ const WeddingVendors = () => {
               </div>
 
               <div className="wedding-form-group">
+                <label htmlFor="dazzleUs" className="form-label">
+                  Anything Else You Would Like Your Potential Vendors To Know
+                  About Your Wedding?
+                </label>
+                <p className="wedding-form-group-p">Dazzle us</p>
+                <textarea
+                  className="form-control"
+                  id="dazzleUs"
+                  rows={5}
+                ></textarea>
+              </div>
+
+              <div className="wedding-form-group">
                 <label htmlFor="makeupArtist" className="form-label">
                   Makeup Artist
                 </label>
@@ -494,6 +453,20 @@ const WeddingVendors = () => {
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
+                </select>
+              </div>
+
+              <div className="wedding-form-group">
+                <label htmlFor="cateringId" className="form-label">
+                  Catering
+                </label>
+                <select className="form-select form-control" id="cateringId">
+                  <option value="" disabled selected>
+                    Select An Option
+                  </option>
+                  <option value="Option1">Option 1</option>
+                  <option value="Option2">Option 2</option>
+                  <option value="Option3">Option 3</option>
                 </select>
               </div>
 
@@ -540,9 +513,38 @@ const WeddingVendors = () => {
                   ))}
                 </div>
               </div>
-            </div>
 
-            <div className="col-lg-6">
+              <div className="wedding-form-group">
+                <label className="form-label">Additional Vendors</label>
+                <div className="wedding-checkboxes">
+                  {[
+                    {
+                      labelId: "liveArtistId",
+                      title: "Live Artist",
+                    },
+                    {
+                      labelId: "cigarsID",
+                      title: "Cigars",
+                    },
+                  ].map((item, index) => (
+                    <div className="form-check" key={index}>
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="AditionalVendors"
+                        id={item.labelId}
+                      />
+                      <label
+                        className="form-check-label"
+                        htmlFor={item.labelId}
+                      >
+                        {item.title}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className=" wedding-form-group">
                 <label className="form-label">Name</label>
                 <div className="row">
@@ -609,4 +611,4 @@ const WeddingVendors = () => {
   );
 };
 
-export default WeddingVendors;
+export default WeddingVendors2;
