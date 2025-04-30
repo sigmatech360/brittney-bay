@@ -89,7 +89,7 @@ const PhotographerDetails = () => {
               <div className="col-md-12">
                 <div className="about-vendor">
                   <div className="row">
-                    <div className="col-lg-3">
+                    <div className="col-xl-3 col-lg-4">
                       <div className="about-vendor__leftContent">
                         <h4>About this Vendor</h4>
                         <div className="about-vendor__leftContent-img-div">
@@ -103,7 +103,7 @@ const PhotographerDetails = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-9">
+                    <div className="col-xl-9 col-lg-8">
                       <div className="about-vendor__rightContent">
                         <p>
                           We offer: Photography 📷️ Videography 🎬️ DJs 🎧️Day

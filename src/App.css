@@ -726,11 +726,19 @@ p {
   background: #000;
   padding: 230px 0 140px;
   color: #fff;
+  background-size: cover;
+  background-position: center;
 }
 
 .inner-banner__content h1 {
   font-size: 70px;
   font-weight: 500;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.inner-banner__content p {
+  font-size: 16;
+  color: #aaaaaa;
 }
 
 .service-cards-total {
@@ -1154,6 +1162,172 @@ label.form-check-label {
   border-left: 1px solid #707070;
   padding: 5px 0 30px 20px;
 }
+
+.inner-banner__multiStep-form {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  border-radius: 20px;
+  min-height: 580px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #707070;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.inner-banner__multiStep-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.inner-banner__multiStep-form .form-control {
+  background-color: transparent;
+  color: #aaaaaa;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.inner-banner__multiStep-form .form-control::placeholder {
+  color: #aaaaaa;
+}
+.inner-banner__multiStep-form .form-select {
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23cccccc' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #ccc;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.inner-banner__multiStep-form .form-select option {
+  background-color: #111; /* fallback dark style */
+  color: #ccc;
+}
+.inner-banner__multiStep-form .step-buttons {
+  display: flex;
+  gap: 10px;
+}
+.inner-banner__multiStep-form .step-buttons button {
+  background-color: #212121;
+  color: #fff;
+  padding: 16px;
+  line-height: 1;
+  border: unset;
+  flex-grow: 1;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: 0.25s all linear;
+}
+.inner-banner__multiStep-form .step-buttons button:hover {
+  filter: invert(1);
+}
+
+.inner-banner__multiStep-form input[type="date"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3e%3cpath d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+}
+
+.wedding-form-group-multiForm-radio {
+  display: flex;
+  justify-content: space-between;
+}
+.inner-banner__multiStep-form .form-check-input[type="radio"] {
+  border: 3px solid #686868;
+}
+.inner-banner__multiStep-form .form-check-input:checked {
+  background: #000;
+  border: 2px solid #fff;
+}
+.inner-banner__multiStep-form .form-label {
+  color: #ccc;
+  font-weight: 400;
+}
+.inner-banner__multiStep-form .form-check-label {
+  color: #ccc;
+  font-size: 15px;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #707070;
+  border-radius: 16px;
+  height: 120px;
+  width: 100%;
+  color: #aaaaaa;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+.upload-box__logo {
+  height: 220px;
+}
+
+.preview-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #707070;
+}
+
+.preview-box img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.preview-box button {
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  background: transparent;
+  top: 0;
+}
+
+.preview-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.preview-grid .preview-box {
+  position: relative;
+}
+
+.preview-grid img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.preview-grid button {
+  position: absolute;
+  top: -10px;
+  right: -13px;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+.inner-banner__multiStep-form .wedding-form-group {
+  margin-bottom: 20px;
+}
 /* Inner Pages End */
 
 /* Footer Start */
@@ -1351,9 +1525,18 @@ label.form-check-label {
   .faq-sec .sec-head h2 {
     font-size: 59px;
   }
+  .wedding-vendors__sec {
+    max-width: 1180px;
+  }
 }
 
 @media (max-width: 1199px) {
+  .about-vendor__rightContent p {
+    font-size: 15px;
+  }
+  .inner-banner__content h1 {
+    font-size: 55px;
+  }
   .main-navbar .navbar-brand img {
     width: 130px;
   }
@@ -1415,5 +1598,161 @@ label.form-check-label {
   }
   .plan-three__box {
     max-width: 170px;
+  }
+
+  .wedding-vendors__sec {
+    max-width: 980px;
+  }
+  .footer-quick__links-header {
+    font-size: 20px;
+  }
+  .footer-quick__link {
+    font-size: 15px;
+  }
+  .footer-quick__links-list {
+    gap: 16px;
+  }
+  .main-footer__content {
+    padding-left: 16px;
+  }
+  .copyright-link {
+    font-size: 15px;
+  }
+  .copyright-text {
+    font-size: 15px;
+  }
+  .main-footer__content p {
+    font-size: 15px;
+  }
+
+  .service-card__content p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .service-card__content h3 {
+    font-size: 25px;
+    margin-bottom: 6px;
+  }
+
+  .service-card__content-meta {
+    font-size: 14px;
+  }
+
+  .service-card__content .features {
+    margin-bottom: 9px;
+  }
+
+  .service-card__content .features span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .weddingVendors__details .service-card__content {
+    padding: 0 0px;
+  }
+  .weddingVendors-gallery-div-2-1 img {
+    height: 200px;
+  }
+  .weddingVendors-gallery-div-2-2 img {
+    height: 200px;
+  }
+  .about-vendor__rightContent {
+    border-left: unset;
+    padding: 5px 0 30px 0px;
+  }
+
+  .about-vendor__leftContent-img-div {
+    margin-bottom: 20px;
+  }
+
+  .weddingVendors__details {
+    padding: 60px 0 20px;
+  }
+  .service-card__content {
+    margin-top: 16px;
+  }
+  .wedding-vendors__sec {
+    max-width: 750px;
+  }
+  .main-footer__content {
+    padding: 0 0 40px;
+    border: 0;
+  }
+
+  .main-footer__left {
+    padding: 0;
+  }
+
+  .main-footer {
+    padding: 40px 0;
+  }
+  .footer-copyright {
+    padding: 16px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .weddingVendors-gallery {
+    flex-direction: column;
+  }
+  .weddingVendors-gallery-div-2-2 img {
+    height: unset;
+  }
+  .photographers-list__sec {
+    padding: 40px 0;
+  }
+  .wedding-vendors__sec {
+    max-width: 555px;
+  }
+  .footer-quick__links-div {
+    padding-bottom: 30px;
+  }
+  .footer-quick__links-header {
+    font-size: 25px;
+    margin-bottom: 16px;
+  }
+  .main-footer {
+    padding: 40px 0 0;
+  }
+
+  .copyright-content {
+    flex-direction: column;
+    gap: 7px;
+  }
+  .inner-banner__content h1 {
+    font-size: 38px;
+  }
+  .inner-banner {
+    padding: 160px 0 80px;
+  }
+}
+@media (max-width: 575px) {
+  .wedding-vendors__sec {
+    max-width: 555px;
+    margin: -251px 10px 40px;
+    padding: 40px 5px;
+  }
+  .wedding-form-group {
+    margin-bottom: 16px;
+  }
+  .wedding-vendors__sec .sec-head h2 {
+    font-size: 35px;
+  }
+  .form-label {
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card__content .features {
+    gap: 10px;
+  }
+}
+@media (max-width: 430px) {
+  .copyright-links {
+    flex-direction: column;
+    gap: 8px;
   }
 }

@@ -5,6 +5,7 @@ import Photographers from "../screens/Photographers";
 import WeddingVendors from "../screens/WeddingVendors";
 import PhotographerDetails from "../screens/PhotographerDetails";
 import WeddingVendors2 from "../screens/WeddingVendors2";
+import WeddingBusiness from "../screens/WeddingBusiness";
 
 // Import your components/pages
 
@@ -17,6 +18,7 @@ const AppRouter = () => {
         <Route path="/photographer/details" element={<PhotographerDetails />} />
         <Route path="/wedding-vendors" element={<WeddingVendors />} />
         <Route path="/wedding-vendors-2" element={<WeddingVendors2 />} />
+        <Route path="/wedding-business" element={<WeddingBusiness />} />
       </Routes>
     </Router>
   );

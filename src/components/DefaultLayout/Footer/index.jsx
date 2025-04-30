@@ -48,7 +48,7 @@ const Footer = () => {
       <footer className="main-footer">
         <div className="container">
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-lg-8 order-2 order-lg-1">
               <div className="main-footer__left">
                 <div className="row">
                   {footerLinkSections.map((section, idx) => (
@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-lg-4 order-1 order-lg-2">
               <div className="main-footer__content">
                 <Link to="/" className="main-footer__content-logo">
                   <img src={footerLogo} alt="Foter Logo" />
