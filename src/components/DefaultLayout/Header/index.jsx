@@ -18,7 +18,7 @@ const navLinks = [
 const Header = () => {
   return (
     <Navbar expand="lg" className="main-navbar" variant="dark">
-      <Container>
+      <Container className="position-relative">
         <div className="mainNav-outer__div">
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav" className="mainNav-list">
@@ -51,6 +51,41 @@ const Header = () => {
               Become a Vendor
             </Nav.Link>
           </div>
+        </div>
+        <div className="mainNav-outer__div-mobile">
+          <div className="mainNav-outer__div-mobile-logoIcon">
+            <Navbar.Brand as={Link} to="/">
+              <img src={logo} alt="My Virtual PI" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbar-nav" />
+          </div>
+          <Navbar.Collapse id="navbar-nav" className="mainNav-list">
+            <Nav>
+              {navLinks.map((link, index) => (
+                <Nav.Link as={Link} to={link.path} key={index}>
+                  {link.label}
+                </Nav.Link>
+              ))}
+            </Nav>
+            <div className="mainNav-right">
+              <button className="mainNav-right__icon mainNav-right__icon-search">
+                <IoSearch />
+              </button>
+              <button className="mainNav-right__icon mainNav-right__icon-fav">
+                <FaRegHeart />
+              </button>
+              <Nav.Link as={Link} to={""} className=" login-btn">
+                Login
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to={""}
+                className="become-vendor-btn theme-fill-btn"
+              >
+                Become a Vendor
+              </Nav.Link>
+            </div>
+          </Navbar.Collapse>
         </div>
       </Container>
     </Navbar>

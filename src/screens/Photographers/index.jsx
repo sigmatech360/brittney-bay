@@ -1,5 +1,6 @@
 import React from "react";
 import DefaultLayout from "../../components/DefaultLayout";
+import weddingbusinessbannerbg from "../../assets/images/wedding-business-banner-bg.png";
 import { servicesData } from "../../data";
 
 import { FaRegHeart } from "react-icons/fa";
@@ -25,12 +26,16 @@ const Photographers = () => {
 
   return (
     <DefaultLayout>
-      <section className="inner-banner">
+      <section
+        className="inner-banner"
+        style={{ backgroundImage: `url(${weddingbusinessbannerbg})` }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="inner-banner__content">
-                <h1>
+                <h1 data-aos="fade-right"
+                  data-aos-delay="100">
                   Photographers & <span className="fagon">Videographers</span>
                 </h1>
               </div>
@@ -63,7 +68,11 @@ const Photographers = () => {
             <div className="service-card" key={index}>
               <div className="row align-items-center">
                 <div className="col-lg-6">
-                  <div className="service-card__image">
+                  <div
+                    className="service-card__image"
+                    data-aos="fade-right"
+                    data-aos-delay={index * 100}
+                  >
                     <Swiper
                       modules={[Navigation, Pagination]}
                       navigation
@@ -87,7 +96,11 @@ const Photographers = () => {
                   </div>
                 </div>
                 <div className="col-lg-6">
-                  <div className="service-card__content">
+                  <div
+                    className="service-card__content"
+                    data-aos="fade-left"
+                    data-aos-delay={index * 100}
+                  >
                     <h3>{item.title}</h3>
                     <div className="service-card__content-meta">
                       ⭐{" "}

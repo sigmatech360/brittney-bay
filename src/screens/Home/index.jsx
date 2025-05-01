@@ -153,7 +153,7 @@ const Home = () => {
         </video>
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-md-8">
+            <div className="col-lg-8">
               <div className="main-banner__content">
                 <div
                   className="banner-images"
@@ -192,7 +192,7 @@ const Home = () => {
 
       <section className="plan-three">
         <div className="container">
-          <div className="row align-items-center">
+          <div className="row align-items-center flex-lg-row flex-column-reverse">
             <div className="col-lg-4">
               <div
                 className="sec-head"
@@ -212,26 +212,32 @@ const Home = () => {
                 data-aos-delay="300"
                 data-aos-offset="100"
               >
-                <div className="plan-three__box">
-                  <h5>01</h5>
-                  <p>
-                    Tell us about your dream wedding (budget, style, location).
-                  </p>
+                <div className="plan-three__box plan-three__box-1">
+                  <div>
+                    <h5>01</h5>
+                    <p>
+                      Tell us about your dream wedding (budget, style, location).
+                    </p>
+                  </div>
 
                   <div className="plan-three__box-icon plan-three__box-icon-1">
                     <img src={plantreeicon1} alt="Plan Tree Icon" />
                   </div>
                 </div>
-                <div className="plan-three__box">
+                <div className="plan-three__box plan-three__box-2">
                   <div className="plan-three__box-icon plan-three__box-icon-2">
                     <img src={plantreeicon1} alt="Plan Tree Icon" />
                   </div>
-                  <h5>02</h5>
-                  <p>Get matched with trusted vendors that fit your vision.</p>
+                  <div>
+                    <h5>02</h5>
+                    <p>Get matched with trusted vendors that fit your vision.</p>
+                  </div>
                 </div>
-                <div className="plan-three__box">
-                  <h5>03</h5>
-                  <p>Book directly and bring your dream wedding to life!</p>
+                <div className="plan-three__box plan-three__box-3">
+                  <div>
+                    <h5>03</h5>
+                    <p>Book directly and bring your dream wedding to life!</p>
+                  </div>
                   <div className="plan-three__box-icon plan-three__box-icon-3">
                     <img src={plantreeicon1} alt="Plan Tree Icon" />
                   </div>
@@ -245,7 +251,7 @@ const Home = () => {
       <section className="stress-free__sec">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-md-7">
+            <div className="col-xl-6 col-lg-7">
               <div className="sec-head">
                 <h2 data-aos="fade-up" data-aos-delay="100">
                   A <span className="fagon">Stress-Free</span> Way to Plan Your{" "}
@@ -271,8 +277,8 @@ const Home = () => {
 
       <section className="home-about__sec">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
+          <div className="row align-items-center flex-md-row flex-column-reverse">
+            <div className="col-md-6">
               <div className="sec-head">
                 <h2 data-aos="fade-right" data-aos-delay="200">
                   A little About <span className="fagon">Jeremy</span> +{" "}
@@ -291,7 +297,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-md-6 mb-md-0 mb-4">
               <div
                 className="home-about__img ps-xl-5 ms-xl-5"
                 data-aos="zoom-in"
@@ -321,7 +327,7 @@ const Home = () => {
             </div>
 
             {whyChooseIconsData.map((item, index) => (
-              <div className="col-lg-3" key={index}>
+              <div className="col-lg-3 col-md-6 mb-lg-0 mb-3" key={index}>
                 <div
                   className="why-choose__box"
                   data-aos="flip-left"
@@ -341,7 +347,7 @@ const Home = () => {
       <section className="grow-wedding__business">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-6 mb-lg-0 mb-5">
               <div className="grow-wedding__business-leftCol">
                 <div className="sec-head">
                   <h2 data-aos="fade-right" data-aos-delay="100">
@@ -367,7 +373,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="sec-head">
+              <div className="sec-head mb-4">
                 <h2 data-aos="fade-left" data-aos-delay="200">
                   How It <span className="fagon fw-500">Works for</span> Vendors
                 </h2>
@@ -401,7 +407,7 @@ const Home = () => {
       <section className="faq-sec">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-6 mb-lg-0 mb-4">
               <div className="faq-sec__leftCol">
                 <div className="sec-head">
                   <p

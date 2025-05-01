@@ -17,7 +17,11 @@ const PhotographerDetails = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <div className="weddingVendors-gallery">
-                  <div className="weddingVendors-gallery-div weddingVendors-gallery-div-1">
+                  <div
+                    className="weddingVendors-gallery-div weddingVendors-gallery-div-1"
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                  >
                     <img
                       src={weddingvendordetailimg1}
                       className="img-fluid"
@@ -26,14 +30,14 @@ const PhotographerDetails = () => {
                   </div>
                   <div className="weddingVendors-gallery-div weddingVendors-gallery-div-2">
                     <div className="weddingVendors-gallery-div-2-1">
-                      <div>
+                      <div data-aos="flip-right" data-aos-delay="200">
                         <img
                           src={weddingvendordetailimg2}
                           className="img-fluid"
                           alt=""
                         />
                       </div>
-                      <div>
+                      <div data-aos="flip-left" data-aos-delay="100">
                         <img
                           src={weddingvendordetailimg3}
                           className="img-fluid"
@@ -41,7 +45,11 @@ const PhotographerDetails = () => {
                         />
                       </div>
                     </div>
-                    <div className="weddingVendors-gallery-div-2-2">
+                    <div
+                      className="weddingVendors-gallery-div-2-2"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                    >
                       <img
                         src={weddingvendordetailimg4}
                         className="img-fluid"
@@ -52,7 +60,11 @@ const PhotographerDetails = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="service-card__content">
+                <div
+                  className="service-card__content"
+                  data-aos="fade-left"
+                  data-aos-delay="100"
+                >
                   <h3>Pretty Films</h3>
                   <div className="service-card__content-meta">
                     ⭐{" "}
@@ -90,7 +102,11 @@ const PhotographerDetails = () => {
                 <div className="about-vendor">
                   <div className="row">
                     <div className="col-xl-3 col-lg-4">
-                      <div className="about-vendor__leftContent">
+                      <div
+                        className="about-vendor__leftContent"
+                        data-aos="fade-right"
+                        data-aos-delay="100"
+                      >
                         <h4>About this Vendor</h4>
                         <div className="about-vendor__leftContent-img-div">
                           <div className="about-vendor__leftContent-img">
@@ -104,7 +120,11 @@ const PhotographerDetails = () => {
                       </div>
                     </div>
                     <div className="col-xl-9 col-lg-8">
-                      <div className="about-vendor__rightContent">
+                      <div
+                        className="about-vendor__rightContent"
+                        data-aos="fade-left"
+                        data-aos-delay="100"
+                      >
                         <p>
                           We offer: Photography 📷️ Videography 🎬️ DJs 🎧️Day
                           of Coordination👰Photo Booth💥
