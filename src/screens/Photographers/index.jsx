@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Photographers = () => {
   const itemsPerPage = 4;
@@ -116,9 +117,9 @@ const Photographers = () => {
                       ))}
                     </div>
                     <div className="actions">
-                      <button className="service-card__content-btn">
+                      <Link to="/photographer/details" className="service-card__content-btn">
                         Hire Me
-                      </button>
+                      </Link>
                       <span>${item.price}</span>
                     </div>
                   </div>

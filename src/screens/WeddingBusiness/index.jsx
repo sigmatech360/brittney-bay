@@ -3,6 +3,7 @@ import DefaultLayout from "../../components/DefaultLayout";
 import MultiStepForm from "../../components/MultiStepForm";
 
 import weddingbusinessbannerbg from "../../assets/images/wedding-business-banner-bg.png";
+import GrowWeddingBusinessSec from "../../components/GrowWeddingBusinessSec";
 
 const WeddingBusiness = () => {
   return (
@@ -33,6 +34,8 @@ const WeddingBusiness = () => {
           </div>
         </div>
       </section>
+
+      {/* <GrowWeddingBusinessSec /> */}
     </DefaultLayout>
   );
 };

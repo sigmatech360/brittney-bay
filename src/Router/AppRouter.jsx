@@ -7,8 +7,6 @@ import PhotographerDetails from "../screens/PhotographerDetails";
 import WeddingVendors2 from "../screens/WeddingVendors2";
 import WeddingBusiness from "../screens/WeddingBusiness";
 
-// Import your components/pages
-
 const AppRouter = () => {
   return (
     <Router basename="/brittney-bay">

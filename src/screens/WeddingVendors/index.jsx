@@ -126,8 +126,9 @@ const WeddingVendors = () => {
                     <div className="form-check" key={index}>
                       <input
                         className="form-check-input"
-                        type="radio"
+                        type="checkbox"
                         name="VisionOfWedding"
+                        value={item.title}
                         id={item.labelId}
                       />
                       <label
@@ -404,8 +405,9 @@ const WeddingVendors = () => {
                     <div className="form-check" key={index}>
                       <input
                         className="form-check-input"
-                        type="radio"
+                        type="checkbox"
                         name="PhotoVideoBooth"
+                        value={item.title}
                         id={item.labelId}
                       />
                       <label
@@ -454,8 +456,9 @@ const WeddingVendors = () => {
                     <div className="form-check" key={index}>
                       <input
                         className="form-check-input"
-                        type="radio"
+                        type="checkbox"
                         name="dessertsAndLateNightSnacks"
+                        value={item.title}
                         id={item.labelId}
                       />
                       <label
@@ -526,8 +529,9 @@ const WeddingVendors = () => {
                     <div className="form-check" key={index}>
                       <input
                         className="form-check-input"
-                        type="radio"
+                        type="checkbox"
                         name="stationary"
+                        value={item.title}
                         id={item.labelId}
                       />
                       <label

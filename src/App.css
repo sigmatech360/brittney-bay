@@ -80,12 +80,17 @@ p {
   z-index: 999;
 }
 
-.main-navbar .navbar-nav .nav-link {
+.main-navbar .navbar-nav a {
   color: #fff;
+  cursor: pointer;
   position: relative;
+  padding: 8px;
   transition: color 0.3s ease;
 }
-.main-navbar .navbar-nav .nav-link::after {
+.main-navbar .navbar-nav a:hover {
+  color: #fff;
+}
+.main-navbar .navbar-nav a::after {
   content: "";
   position: absolute;
   display: block;
@@ -97,7 +102,7 @@ p {
   bottom: 0;
   transition: width 0.3s ease;
 }
-.main-navbar .navbar-nav .nav-link:hover:after {
+.main-navbar .navbar-nav a:hover:after {
   width: 70%;
 }
 
@@ -140,11 +145,12 @@ p {
   }
 }
 
-.mainNav-right .nav-link {
+.mainNav-right a {
   font-size: 16px;
   border: 1px solid;
   color: #fff;
   padding: 10px 20px;
+  text-decoration: none;
   line-height: 1;
   border-radius: 30px;
   transition: all 0.25s linear;
@@ -225,12 +231,25 @@ p {
 .banner-images {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  align-items: end;
   gap: 16px;
 }
 .banner-images img {
-  width: 140px;
+  /* width: 140px; */
+  width: 200px;
 }
+
+/* .mainBanner-topText {
+  font-weight: 300 !important;
+}
+
+.banner__rounded-borderText {
+  border: 1px solid;
+  padding: 9px 22px 0 27px;
+  border-radius: 50%;
+  line-height: 1;
+} */
 
 .main-banner__content h1 {
   font-size: 50px;
@@ -238,7 +257,7 @@ p {
 }
 .main-banner__content p {
   font-size: 16px;
-  max-width: 520px;
+  /* max-width: 767px; */
   margin: 0 auto 16px;
 }
 .theme-btn {
@@ -724,6 +743,24 @@ p {
   top: 147%;
 }
 
+.container-modal {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+.homeModalForm {
+  padding: 10px;
+}
+.homeModalForm .sec-head h2 {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 500;
+}
+.homeModalForm .sec-head {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 /* Inner Pages Start */
 .inner-banner {
   background: #000;
@@ -807,6 +844,10 @@ p {
   width: 40px;
   height: 40px;
   font-size: 26px;
+  transition: all 0.25s linear;
+}
+.service-card__image .favorite-btn:hover {
+  color: red;
 }
 
 .service-card__image .swiper-button-prev:after,
@@ -877,6 +918,7 @@ p {
   transition: all 0.25s linear;
   background-color: #000;
   border-color: #000;
+  text-decoration: none;
 }
 .service-card__content-btn:hover {
   border-color: #212121;
@@ -918,9 +960,10 @@ p {
   background: transparent;
   border-radius: 5px;
   font-size: 16px;
+  transition: all 0.25s linear;
 }
-
-.services-cards__pagination button.active {
+.services-cards__pagination button.active,
+.services-cards__pagination button:hover {
   background: #212121;
   color: #fff;
 }
@@ -930,7 +973,7 @@ p {
   color: #fff !important;
   padding: 0px 40px;
   border-radius: 22px !important;
-  transition: all .25s linear;
+  transition: all 0.25s linear;
 }
 
 .wedding-vendors__sec {
@@ -979,10 +1022,13 @@ textarea.form-control {
   border-radius: 12px;
 }
 
-.form-check-input[type="radio"] {
+.form-check-input[type="radio"],
+.form-check-input[type="checkbox"] {
   border: 1px solid #686868;
+  border-radius: 50%;
 }
-.form-check-input[type="radio"]:focus {
+.form-check-input[type="radio"]:focus,
+.form-check-input[type="checkbox"]:focus {
   box-shadow: unset;
 }
 .form-check-input:checked {
@@ -1024,10 +1070,10 @@ label.form-check-label {
 .WeddingVendorsDetails__page .main-navbar {
   position: unset;
 }
-.WeddingVendorsDetails__page .main-navbar .navbar-nav .nav-link {
+.WeddingVendorsDetails__page .main-navbar .navbar-nav a {
   color: #212121;
 }
-.WeddingVendorsDetails__page .main-navbar .navbar-nav .nav-link::after {
+.WeddingVendorsDetails__page .main-navbar .navbar-nav a::after {
   background-color: #212121;
 }
 .WeddingVendorsDetails__page .mainNav-right__icon {
@@ -1348,6 +1394,7 @@ label.form-check-label {
 .wedding-business__banner {
   padding: 170px 0 60px;
 }
+
 /* Inner Pages End */
 
 /* Footer Start */
@@ -1511,11 +1558,11 @@ label.form-check-label {
   .main-navbar .navbar-brand img {
     width: 160px;
   }
-  .main-navbar .navbar-nav .nav-link {
+  .main-navbar .navbar-nav a {
     padding: 8px 5px;
     font-size: 15px;
   }
-  .mainNav-right .nav-link {
+  .mainNav-right a {
     font-size: 15px;
   }
   .mainNav-right__icon {
@@ -1551,6 +1598,9 @@ label.form-check-label {
 }
 
 @media (max-width: 1199px) {
+  .banner-images img {
+    width: 160px;
+  }
   .about-vendor__rightContent p {
     font-size: 15px;
   }
@@ -1560,7 +1610,7 @@ label.form-check-label {
   .main-navbar .navbar-brand img {
     width: 130px;
   }
-  .main-navbar .navbar-nav .nav-link {
+  .main-navbar .navbar-nav a {
     padding: 8px 5px;
     font-size: 14px;
   }
@@ -1670,6 +1720,9 @@ label.form-check-label {
   display: none;
 }
 @media (max-width: 991px) {
+  .main-navbar .navbar-nav a:hover:after {
+    content: unset;
+  }
   .inner-banner {
     background-position: right;
   }
@@ -1709,7 +1762,7 @@ label.form-check-label {
     border-color: #fff !important;
     color: #fff;
   }
-  .WeddingVendorsDetails__page .main-navbar .navbar-nav .nav-link {
+  .WeddingVendorsDetails__page .main-navbar .navbar-nav a {
     color: #fff;
   }
   .WeddingVendorsDetails__page .mainNav-right .login-btn {
@@ -1963,5 +2016,8 @@ label.form-check-label {
   }
   .why-choose__sec .sec-head h2 {
     font-size: 35px;
+  }
+  .homeModalForm .sec-head h2 {
+    font-size: 40px;
   }
 }

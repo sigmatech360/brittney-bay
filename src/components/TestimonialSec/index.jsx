@@ -7,9 +7,9 @@ import jessica_m from "../../assets/images/jessica-m.png";
 import jessica_r from "../../assets/images/jessica-r.png";
 import sammantha_r from "../../assets/images/sammantha-r.png";
 
-const TestimonialSec = () => {
+const TestimonialSec = (props) => {
   return (
-    <section className="testimonial-sec">
+    <section className="testimonial-sec" id={`${props.id}`}>
       <div className="container">
         <div className="row justify-content-between">
           <div

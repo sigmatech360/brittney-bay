@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DefaultLayout from "../../components/DefaultLayout";
 import TestimonialSec from "../../components/TestimonialSec";
 
@@ -11,22 +11,18 @@ import verifiedvendoricon from "../../assets/images/verified-vendor-icon.png";
 import easybookingicon from "../../assets/images/easy-booking-icon.png";
 import personalizedvendoricon from "../../assets/images/personalized-vendor-icon.png";
 
-import profileicon from "../../assets/images/profile-icon.png";
-import matchedicon from "../../assets/images/matched-icon.png";
-import bookingrequesticon from "../../assets/images/booking-request-icon.png";
-import boosticon from "../../assets/images/boost-icon.png";
-
-import plantreeicon1 from "../../assets/images/plan-tree-icon-1.png";
 
 import bannerBgVideo from "../../assets/images/brittney-banner-bg.mp4";
 
 import Accordion from "react-bootstrap/Accordion";
 
+import { Modal, Button, Form } from "react-bootstrap";
+
 const whyChooseIconsData = [
   {
     id: 1,
     icon: smartvendoricon,
-    text: "Smart vendor matchmaking",
+    text: "Vetted, top Dallas professionals",
   },
   {
     id: 2,
@@ -36,13 +32,13 @@ const whyChooseIconsData = [
   {
     id: 3,
     icon: easybookingicon,
-    text: "Easy booking system",
+    text: "Free matchmaking service",
   },
-  {
-    id: 4,
-    icon: personalizedvendoricon,
-    text: "Personalized vendor recommendations",
-  },
+  // {
+  //   id: 4,
+  //   icon: personalizedvendoricon,
+  //   text: "Personalized vendor recommendations",
+  // },
 ];
 
 export const faqsData1 = [
@@ -110,40 +106,28 @@ export const faqsData2 = [
   },
 ];
 
-const growWeddingBusinessIconData = [
-  {
-    id: 1,
-    icon: profileicon,
-    title: "Create Your Profile",
-    description:
-      "Showcase your business with a stunning profile featuring photos, videos, and a compelling description of your services.",
-  },
-  {
-    id: 2,
-    icon: matchedicon,
-    title: "Get Matched with Ideal Clients",
-    description:
-      "Our intelligent vendor-matching system connects you with couples based on budget, style, and availability.",
-  },
-  {
-    id: 3,
-    icon: bookingrequesticon,
-    title: "Receive Booking Requests",
-    description:
-      "Couples shortlist their favorite vendors and reach out directly to check availability and book your services.",
-  },
-  {
-    id: 4,
-    icon: boosticon,
-    title: "Boost Your Visibility & Credibility",
-    description:
-      "Gain trust and credibility with client reviews, ratings, and an interactive digital booklet showcasing your work.",
-  },
-];
 
-import { Link } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
+import PlanThreeSec from "../../components/PlanThreeSec";
+import StressFreeSec from "../../components/StressFreeSec";
+import GrowWeddingBusinessSec from "../../components/GrowWeddingBusinessSec";
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // handle form data here
+    alert("Form submitted!");
+    handleClose(); // Close modal
+    navigate("/photographers");
+  };
+
   return (
     <DefaultLayout>
       <section className="main-banner">
@@ -160,29 +144,39 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  <img src={bannerimg1} alt="" />
-                  <img src={bannerimg2} alt="" />
+                  <img src={bannerimg1} className="img-fluid" alt="" />
+                  <img src={bannerimg2} className="img-fluid" alt="" />
                 </div>
                 <h1 data-aos="fade-up" data-aos-delay="300">
-                  Your Dream <span className="fagon">Wedding</span>, Made{" "}
-                  <span className="fagon">Simple</span>
+                  {/* <span className="fagon mainBanner-topText"><span className="banner__rounded-borderText">Dallas</span> Exclusive</span> <br /> */}
+                  Exclusive <span className="fagon">Matches. </span>,
+                  Exceptional <span className="fagon">Weddings.</span>
                 </h1>
                 <p data-aos="fade-up" data-aos-delay="500">
-                  Finding the perfect vendors for your big day has never been
-                  easier. Match with top-rated wedding professionals, plan
-                  effortlessly, and book with confidence all in one place.
+                  Curated for couples who want a wedding that's effortless,
+                  elegant, and entirely personalized. No endless searching- just
+                  personalized vendor recommendations with the best of Dallas!
+                  Tell us your style, budget, and vision and get paired with the
+                  most trusted professionals in Dallas- vetted, experienced, and
+                  ready to bring your dream day to life.
                 </p>
                 <div
                   className="main-banner__buttons"
                   data-aos="fade-up"
                   data-aos-delay="700"
                 >
-                  <button className="theme-btn theme-btn__transparent-bg">
+                  <button
+                    onClick={handleShow}
+                    className="theme-btn theme-btn__transparent-bg"
+                  >
                     Looking For a Vendor
                   </button>
-                  <button className="theme-btn theme-btn__white-bg theme-fill-btn">
+                  <Link
+                    to={"/wedding-vendors"}
+                    className="theme-btn theme-btn__white-bg theme-fill-btn"
+                  >
                     Plan My Whole Wedding
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -190,92 +184,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="plan-three">
-        <div className="container">
-          <div className="row align-items-center flex-lg-row flex-column-reverse">
-            <div className="col-lg-4">
-              <div
-                className="sec-head"
-                data-aos="fade-right"
-                data-aos-delay="300"
-              >
-                <h2>
-                  Plan in Three <span className="fagon fw-500">Easy Steps</span>
-                </h2>
-                <button className="body-btn">Start Planing Now</button>
-              </div>
-            </div>
-            <div className="col-lg-8">
-              <div
-                className="plan-three__boxes"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                data-aos-offset="100"
-              >
-                <div className="plan-three__box plan-three__box-1">
-                  <div>
-                    <h5>01</h5>
-                    <p>
-                      Tell us about your dream wedding (budget, style, location).
-                    </p>
-                  </div>
+      {/* <PlanThreeSec /> */}
+      {/* <StressFreeSec /> */}
 
-                  <div className="plan-three__box-icon plan-three__box-icon-1">
-                    <img src={plantreeicon1} alt="Plan Tree Icon" />
-                  </div>
-                </div>
-                <div className="plan-three__box plan-three__box-2">
-                  <div className="plan-three__box-icon plan-three__box-icon-2">
-                    <img src={plantreeicon1} alt="Plan Tree Icon" />
-                  </div>
-                  <div>
-                    <h5>02</h5>
-                    <p>Get matched with trusted vendors that fit your vision.</p>
-                  </div>
-                </div>
-                <div className="plan-three__box plan-three__box-3">
-                  <div>
-                    <h5>03</h5>
-                    <p>Book directly and bring your dream wedding to life!</p>
-                  </div>
-                  <div className="plan-three__box-icon plan-three__box-icon-3">
-                    <img src={plantreeicon1} alt="Plan Tree Icon" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="stress-free__sec">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-6 col-lg-7">
-              <div className="sec-head">
-                <h2 data-aos="fade-up" data-aos-delay="100">
-                  A <span className="fagon">Stress-Free</span> Way to Plan Your{" "}
-                  <span className="fagon">Wedding</span>
-                </h2>
-                <p data-aos="fade-up" data-aos-delay="300">
-                  Let us do the heavy lifting! We’ll match you with the best
-                  vendors, so you can focus on the moments that matter.
-                </p>
-                <Link
-                  to=""
-                  className="theme-btn theme-btn__transparent-bg"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  Find My Vendors
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="home-about__sec">
+      <section className="home-about__sec" id="homeAboutUs">
         <div className="container">
           <div className="row align-items-center flex-md-row flex-column-reverse">
             <div className="col-md-6">
@@ -287,13 +199,7 @@ const Home = () => {
                 <p data-aos="fade-right" data-aos-delay="400">
                   Brittany & Jeremy started Bay Productions in 2014. With over
                   500 weddings under their belt, they’ve worked with many of the
-                  best vendors that Dallas has to offer! The Bays have 3 boys,
-                  an RV to travel and are avid movie goers. Brittany was born
-                  and raised in the dallas area, loves the lord and is obsessed
-                  with organizing. Jeremy is from kansas, a marine and has never
-                  missed a Joe Rogan podcast. they’re so excited for this next
-                  adventure and for the day they can raise chickens in their
-                  backyard.
+                  best vendors that Dallas has to offer!
                 </p>
               </div>
             </div>
@@ -314,7 +220,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="why-choose__sec">
+      <section className="why-choose__sec" id="homeWhyChooseUs">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -327,7 +233,7 @@ const Home = () => {
             </div>
 
             {whyChooseIconsData.map((item, index) => (
-              <div className="col-lg-3 col-md-6 mb-lg-0 mb-3" key={index}>
+              <div className="col-md-4 mb-lg-0 mb-3" key={index}>
                 <div
                   className="why-choose__box"
                   data-aos="flip-left"
@@ -344,67 +250,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="grow-wedding__business">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 mb-lg-0 mb-5">
-              <div className="grow-wedding__business-leftCol">
-                <div className="sec-head">
-                  <h2 data-aos="fade-right" data-aos-delay="100">
-                    Grow Your{" "}
-                    <span className="fagon fw-500">Wedding Business</span> with
-                    Direct Leads
-                  </h2>
-                  <p data-aos="fade-right" data-aos-delay="300">
-                    Are you a wedding vendor looking to attract more clients?
-                    The Wedding Concierge helps you connect with engaged couples
-                    actively searching for your services. No more wasted
-                    marketing spend our platform delivers high-quality leads
-                    straight to you.
-                  </p>
-                  <button
-                    className="body-btn"
-                    data-aos="fade-right"
-                    data-aos-delay="500"
-                  >
-                    Join as a Vendor
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="sec-head mb-4">
-                <h2 data-aos="fade-left" data-aos-delay="200">
-                  How It <span className="fagon fw-500">Works for</span> Vendors
-                </h2>
-              </div>
+      <GrowWeddingBusinessSec />
 
-              <div className="grow-wedding__business-boxes">
-                {growWeddingBusinessIconData.map((item, index) => (
-                  <div
-                    key={index}
-                    className="grow-wedding__business-box"
-                    data-aos="slide-left"
-                    data-aos-delay={index * 200}
-                  >
-                    <div className="grow-wedding__business-box-icon">
-                      <img src={item.icon} alt={item.title} />
-                    </div>
-                    <div className="grow-wedding__business-box-content">
-                      <h4>{item.title}</h4>
-                      <p>{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TestimonialSec id="homePageTestimonial" />
 
-      <TestimonialSec />
-
-      <section className="faq-sec">
+      <section className="faq-sec" id="homePageFaq">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mb-lg-0 mb-4">
@@ -472,6 +322,135 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Modal
+        show={showModal}
+        className="homeModalForm"
+        onHide={handleClose}
+        dialogClassName="container-modal"
+        centered
+      >
+        <Modal.Header closeButton>
+          {/* <Modal.Title>Looking For a Vendor</Modal.Title> */}
+        </Modal.Header>
+        <Modal.Body>
+          <Form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-md-12">
+                <div className="sec-head">
+                  <h2>
+                    Find Your <span className="fagon">Perfect Wedding</span>{" "}
+                    Vendors
+                  </h2>
+                  <p>What type of vendor are you looking for?</p>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Full Name"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter Your Email"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Phone Number"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <select className="form-select form-control">
+                    <option value="" selected disabled>
+                      Select Vendor Type
+                    </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Set Your Budget"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <select className="form-select form-control">
+                    <option value="" selected disabled>
+                      Select Additional Preferences*
+                    </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <input
+                    type="date"
+                    className="form-control"
+                    placeholder="mm / dd / yyyy"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <select className="form-select form-control">
+                    <option value="" selected disabled>
+                      Guest Count
+                    </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="wedding-form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Wedding Location"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-12">
+                <div className="wedding-form-group">
+                  <textarea
+                    className="form-control"
+                    placeholder="Type your message like if you already have your venue booked, please provide that here...….."
+                    rows={5}
+                  ></textarea>
+                </div>
+              </div>
+              <div className="col-lg-12 text-center">
+                <button className="form-submit__btn">Find My Vendors</button>
+              </div>
+            </div>
+          </Form>
+        </Modal.Body>
+      </Modal>
     </DefaultLayout>
   );
 };
